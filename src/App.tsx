@@ -1,36 +1,32 @@
-import { Link, NavLink, Route, Routes } from 'react-router-dom';
+import "./App.css"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import PageNotFound from "./components/PageNotFound";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import NavBar from "./components/NavBar";
 
-import Home from './components/Home';
-import PageNotFound from './components/PageNotFound';
+import { Layout } from "antd";
+const { Header, Footer,Content } = Layout;
 
-function Navbar() {
-  return (
-    <>
-      <h1>Navbar</h1>
 
-      <ul>
-        <li>
-          <NavLink to="/">Home </NavLink>
-        </li>
+const App: React.FC = () => (
+  <Layout>
+      <Header>
+        <NavBar />
+      </Header>
+      <Content style={{minHeight: '80vh'}}>
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route index element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>Dating App &copy;2022</Footer>
+  </Layout>
+);
 
-        <li>
-          <NavLink to="/notfound">PageNotFound </NavLink>
-        </li>
-      </ul>
-    </>
-  );
-}
-
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </>
-  );
-}
 
 export default App;

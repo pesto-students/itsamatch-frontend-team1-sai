@@ -1,3 +1,29 @@
-div {
-  margin: auto;
+.home-tabs .ant-tabs-tab {
+  border-radius: 8px !important;
+}
+
+.home-tabs .ant-tabs-tab-active {
+  color: black !important;
+  background-color: #1677ff !important;
+  border-color: #1677ff !important;
+}
+
+.home-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white !important;
+}
+
+.home-tabs .ant-tabs-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.home-tabs .ant-tabs-tab {
+  width: 50%;
+  justify-content: center;
+}
+
+.home-tabs .ant-list-item-meta-title {
+  margin-top: 0;
+  margin-bottom: 0 !important;
 }
