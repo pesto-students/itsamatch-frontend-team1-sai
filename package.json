@@ -9,7 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@okta/okta-auth-js": "^7.2.0",
+    "@okta/okta-react": "^6.7.0",
+    "@sentry/react": "^7.28.1",
+    "@sentry/tracing": "^7.28.1",
     "antd": "^5.1.0",
+    "dotenv": "^16.0.3",
     "rc-virtual-list": "^3.4.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
