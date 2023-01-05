@@ -1,13 +1,14 @@
-import "./Home.css";
-import React from "react";
-import TitleHeading from "../CommonHeading";
-import ListView from "../ListView";
-import { Col, Row, Tabs } from "antd";
+import './Home.css';
+import React from 'react';
+import { Col, Row, Tabs } from 'antd';
+
+import { ListView } from '../listView';
+import { CommonHeading } from '../commonHeading';
 
 const Home: React.FC = () => {
   return (
     <div className="home-comp">
-      <TitleHeading title={"Hi! User"} />
+      <CommonHeading title={'Hi! User'} />
       <Row>
         <Col md={{ span: 9, offset: 15 }}>
           <Tabs type="card" className="home-tabs">

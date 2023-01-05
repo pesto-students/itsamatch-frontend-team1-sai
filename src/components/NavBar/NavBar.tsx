@@ -14,7 +14,7 @@ const items: MenuProps['items'] = [
     label: 'Register',
     key: '/register',
     icon: <UserAddOutlined />,
-  }
+  },
 ];
 
 const NavBar: React.FC = () => {
@@ -23,10 +23,17 @@ const NavBar: React.FC = () => {
 
   const onClick: MenuProps['onClick'] = (e) => {
     setCurrent(e.key);
-    navigate(e.key)
+    navigate(e.key);
   };
 
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return (
+    <Menu
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode="horizontal"
+      items={items}
+    />
+  );
 };
 
 export default NavBar;

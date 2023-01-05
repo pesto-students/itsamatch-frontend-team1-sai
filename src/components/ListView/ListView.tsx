@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, List } from 'antd';
 import VirtualList from 'rc-virtual-list';
-
-
+import { generateRandom } from '../../utils';
 
 interface UserItem {
   email: string;
@@ -40,7 +39,10 @@ const ListView: React.FC = () => {
   }, []);
 
   const onScroll = (e: React.UIEvent<HTMLElement, UIEvent>) => {
-    if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
+    if (
+      e.currentTarget.scrollHeight - e.currentTarget.scrollTop ===
+      ContainerHeight
+    ) {
       appendData();
     }
   };
@@ -55,14 +57,20 @@ const ListView: React.FC = () => {
         onScroll={onScroll}
       >
         {(item: UserItem) => (
-          <List.Item key={item.email} style={{paddingLeft:0}}>
+          <List.Item key={item.email} style={{ paddingLeft: 0 }}>
             <List.Item.Meta
-              avatar={<Avatar shape={'square'} size="large" src={item.picture.large} />}
+              avatar={
+                <Avatar
+                  shape={'square'}
+                  size="large"
+                  src={item.picture.large}
+                />
+              }
               title={<a href="https://ant.design">{item.name.last}</a>}
               description={item.email}
-              style={{alignItems: 'center'}}
+              style={{ alignItems: 'center' }}
             />
-            <div>{(Math.random() * (9.00 - 1.00 + 1.00) + 1.00).toFixed(2)}</div>
+            <div>{generateRandom()}</div>
           </List.Item>
         )}
       </VirtualList>

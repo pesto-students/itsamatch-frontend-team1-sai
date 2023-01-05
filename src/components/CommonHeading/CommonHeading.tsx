@@ -1,6 +1,5 @@
-import React from "react";
-import { Typography, Row, Col } from "antd";
-import style from './CommonHeading.module.css'
+import React from 'react';
+import { Typography, Row, Col } from 'antd';
 
 const { Title } = Typography;
 
@@ -8,10 +7,7 @@ interface CommonHeadingProps {
   title: string;
 }
 
-
-
-
-const CommonHeading: React.FC<CommonHeadingProps> = ({title}) => {
+const CommonHeading: React.FC<CommonHeadingProps> = ({ title }) => {
   return (
     <>
       <Row>
@@ -21,9 +17,7 @@ const CommonHeading: React.FC<CommonHeadingProps> = ({title}) => {
           md={{ span: 16, offset: 8 }}
           lg={{ span: 16, offset: 8 }}
         >
-          <Title level={3}>
-            {title}
-          </Title>
+          <Title level={3}>{title}</Title>
         </Col>
       </Row>
       <hr className="custom-hr" />

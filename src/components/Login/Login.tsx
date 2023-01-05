@@ -1,69 +1,60 @@
-import React from "react";
-import { Form, Input, Button, Checkbox, Row, Col } from "antd";
-import TitleHeading from "../CommonHeading/CommonHeading";
+import React from 'react';
+import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
+import TitleHeading from '../commonHeading/CommonHeading';
 
 const formItemLayout = {
-    labelCol: {
-      xs: { span: 24 },
-      sm: { span: 8 },
-      md: { span: 8 },
-      lg: { span: 8 },
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 8 },
+    md: { span: 8 },
+    lg: { span: 8 },
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 16 },
+    md: { span: 10 },
+    lg: { span: 10 },
+  },
+};
+
+const tailFormItemLayout = {
+  wrapperCol: {
+    md: {
+      span: 6,
+      offset: 8,
     },
-    wrapperCol: {
-      xs: { span: 24 },
-      sm: { span: 16 },
-      md: { span: 10 },
-      lg: { span: 10 },
+    lg: {
+      span: 4,
+      offset: 8,
     },
-  };
-  
-  const tailFormItemLayout = {
-    wrapperCol: {
-      md: {
-        span: 6,
-        offset: 8,
-      },
-      lg: {
-        span: 4,
-        offset: 8,
-      },
-    },
-  };
+  },
+};
 
 const Login: React.FC = () => {
   return (
     <div className="login-form">
-      <TitleHeading title={'Welcome! Please Login'}/>  
+      <TitleHeading title={'Welcome! Please Login'} />
 
       <Row>
         <Col span={24}>
-          <Form
-            {...formItemLayout}
-            name="normal_login"
-            className="login-form"
-          >
+          <Form {...formItemLayout} name="normal_login" className="login-form">
             <Form.Item
               label="E-mail"
               name="email"
               rules={[
-                { required: true, message: "Please input your Username!" },
+                { required: true, message: 'Please input your Username!' },
               ]}
             >
-              <Input
-                placeholder="Username"
-              />
+              <Input placeholder="Username" />
             </Form.Item>
             <Form.Item
               name="password"
               label="Password"
               rules={[
-                { required: true, message: "Please input your Password!" },
+                { required: true, message: 'Please input your Password!' },
               ]}
             >
-              <Input
-                type="password"
-                placeholder="Password"
-              />
+              <Input type="password" placeholder="Password" />
             </Form.Item>
 
             <Form.Item {...tailFormItemLayout}>

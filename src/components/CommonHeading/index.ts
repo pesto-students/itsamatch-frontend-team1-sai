@@ -1,2 +1,1 @@
-import TitleHeading from "./CommonHeading";
-export default TitleHeading;
+export { default as CommonHeading } from './CommonHeading';

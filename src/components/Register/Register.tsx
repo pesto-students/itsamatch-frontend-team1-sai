@@ -1,13 +1,6 @@
-import React from "react";
-import {
-  Form,
-  Input,
-  Button,
-  DatePicker,
-  Row,
-  Col,
-} from "antd";
-import TitleHeading from "../CommonHeading/CommonHeading";
+import React from 'react';
+import { Form, Input, Button, DatePicker, Row, Col } from 'antd';
+import TitleHeading from '../commonHeading/CommonHeading';
 
 const formItemLayout = {
   labelCol: {
@@ -42,7 +35,9 @@ const Register: React.FC = () => {
 
   return (
     <div className="register-form">
-      <TitleHeading title={'Welcome! Start searching your partner with this Signup'}/>
+      <TitleHeading
+        title={'Welcome! Start searching your partner with this Signup'}
+      />
 
       <Row>
         <Col span={24}>
@@ -56,8 +51,8 @@ const Register: React.FC = () => {
               label="E-mail"
               name="email"
               rules={[
-                { type: "email", message: "E-mail is not valid" },
-                { required: true, message: "Type your E-mail!" },
+                { type: 'email', message: 'E-mail is not valid' },
+                { required: true, message: 'Type your E-mail!' },
               ]}
               hasFeedback
             >
@@ -68,8 +63,8 @@ const Register: React.FC = () => {
               name="password"
               label="Password"
               rules={[
-                { required: true, message: "Type your password" },
-                { min: 8, message: "Min length 8" },
+                { required: true, message: 'Type your password' },
+                { min: 8, message: 'Min length 8' },
               ]}
               hasFeedback
             >
@@ -82,22 +77,22 @@ const Register: React.FC = () => {
               rules={[
                 {
                   required: true,
-                  message: "Please confirm your password!",
+                  message: 'Please confirm your password!',
                 },
                 ({ getFieldValue }) => ({
                   validator(_, value) {
-                    if (!value || getFieldValue("password") === value) {
+                    if (!value || getFieldValue('password') === value) {
                       return Promise.resolve();
                     }
                     return Promise.reject(
                       new Error(
-                        "The two passwords that you entered do not match!"
+                        'The two passwords that you entered do not match!'
                       )
                     );
                   },
                 }),
               ]}
-              dependencies={["password"]}
+              dependencies={['password']}
               hasFeedback
             >
               <Input.Password placeholder="Confirm your password" />
@@ -106,7 +101,7 @@ const Register: React.FC = () => {
             <Form.Item
               label="First Name"
               name="first_name"
-              rules={[{ required: true, message: "Type your first name" }]}
+              rules={[{ required: true, message: 'Type your first name' }]}
             >
               <Input placeholder="Type your fisrt name" />
             </Form.Item>
@@ -114,7 +109,7 @@ const Register: React.FC = () => {
             <Form.Item
               label="Last Name"
               name="last_name"
-              rules={[{ required: true, message: "Type your last name" }]}
+              rules={[{ required: true, message: 'Type your last name' }]}
             >
               <Input placeholder="Type your last name" />
             </Form.Item>
@@ -122,12 +117,12 @@ const Register: React.FC = () => {
             <Form.Item
               label="Date of Birth"
               name="dob"
-              rules={[{ required: true, message: "Select your date of birth" }]}
+              rules={[{ required: true, message: 'Select your date of birth' }]}
             >
               <DatePicker
                 picker="date"
                 placeholder="Choose date of birth"
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
               />
             </Form.Item>
 
