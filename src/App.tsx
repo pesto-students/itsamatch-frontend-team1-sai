@@ -4,10 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
 
-import { Home, Login, PageNotFound, Register } from './components';
+import { Home, Login, NavBar, PageNotFound, Register } from './components';
 
 import { Layout } from 'antd';
-import NavBar from './components/navbar/NavBar';
 
 const { Content, Footer, Header } = Layout;
 
