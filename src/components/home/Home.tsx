@@ -1,4 +1,4 @@
-import './Home.css';
+import './home.css';
 import React from 'react';
 import { Col, Row, Tabs } from 'antd';
 
