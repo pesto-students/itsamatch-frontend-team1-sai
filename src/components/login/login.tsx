@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
-import TitleHeading from '../commonHeading/CommonHeading';
+import { CommonHeading } from '../commonHeading';
 
 const formItemLayout = {
   labelCol: {
@@ -33,7 +33,7 @@ const tailFormItemLayout = {
 const Login: React.FC = () => {
   return (
     <div className="login-form">
-      <TitleHeading title={'Welcome! Please Login'} />
+      <CommonHeading title={'Welcome! Please Login'} />
 
       <Row>
         <Col span={24}>
