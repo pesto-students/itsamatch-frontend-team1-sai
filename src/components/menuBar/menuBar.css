@@ -1,0 +1,15 @@
+.menu-bar .ant-menu-item-selected .ant-menu-title-content {
+    color: black;
+}
+
+.ant-layout-sider-children {
+    background: white;
+}
+
+.ant-layout-sider-trigger {
+    background: white !important;
+    border-top: 1px solid black;
+}
+.ant-layout-sider-trigger span {
+    color: black;
+}

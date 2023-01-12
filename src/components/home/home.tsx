@@ -3,14 +3,14 @@ import React from 'react';
 import { Col, Row, Tabs } from 'antd';
 
 import { ListView } from '../listView';
-import { CommonHeading } from '../commonHeading';
+import { CommonHeading } from '../../components';
 
 const Home: React.FC = () => {
   return (
     <div className="home-comp">
       <CommonHeading title={'Hi! User'} />
       <Row>
-        <Col md={{ span: 9, offset: 15 }}>
+        <Col  md={{ span: 9, offset: 15 }}>
           <Tabs type="card" className="home-tabs">
             <Tabs.TabPane tab="Chats" key="chats">
               <ListView />

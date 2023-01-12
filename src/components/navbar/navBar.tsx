@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { UserAddOutlined, HomeOutlined } from '@ant-design/icons';
+import { UserAddOutlined, LoginOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 const items: MenuProps['items'] = [
   {
-    label: 'Home',
-    key: '/',
-    icon: <HomeOutlined />,
+    label: 'Login',
+    key: '/login',
+    icon: <LoginOutlined />,
   },
   {
     label: 'Register',
