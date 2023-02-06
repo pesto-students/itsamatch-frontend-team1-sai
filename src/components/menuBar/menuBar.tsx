@@ -13,6 +13,7 @@ import {
   UsergroupAddOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { MenuBarOptions } from "../../utils";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -31,11 +32,11 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem("Dating", "1", <HeartFilled />),
-  getItem("Users", "2", <UsergroupAddOutlined />),
-  getItem("Messages", "3", <MessageFilled />),
-  getItem("Activity", "4", <HistoryOutlined />),
-  getItem("Profile", "5", <UserOutlined />),
+  getItem(MenuBarOptions.DATING, "1", <HeartFilled />),
+  getItem(MenuBarOptions.USERS, "2", <UsergroupAddOutlined />),
+  getItem(MenuBarOptions.MESSAGES, "3", <MessageFilled />),
+  getItem(MenuBarOptions.ACTIVITY, "4", <HistoryOutlined />),
+  getItem(MenuBarOptions.PROFILE, "5", <UserOutlined />),
 ];
 
 
