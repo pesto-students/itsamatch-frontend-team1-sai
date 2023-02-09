@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
-import { Menu, MenuProps, Layout, Space } from "antd";
+import { Avatar, Menu, MenuProps, Layout, Space, Typography } from "antd";
 const { Sider } = Layout;
 
 import "./menuBar.css";
@@ -10,6 +9,7 @@ import {
   HeartFilled,
   HistoryOutlined,
   MessageFilled,
+  SettingFilled,
   UsergroupAddOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -32,49 +32,62 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem(MenuBarOptions.DATING, "1", <HeartFilled />),
-  getItem(MenuBarOptions.USERS, "2", <UsergroupAddOutlined />),
-  getItem(MenuBarOptions.MESSAGES, "3", <MessageFilled />),
-  getItem(MenuBarOptions.ACTIVITY, "4", <HistoryOutlined />),
-  getItem(MenuBarOptions.PROFILE, "5", <UserOutlined />),
+  getItem(MenuBarOptions.PROFILE, "1", <UserOutlined />),
+  getItem(MenuBarOptions.LIKES, "2", <HeartFilled />),
+  getItem(MenuBarOptions.USERS, "3", <UsergroupAddOutlined />),
+  getItem(MenuBarOptions.MATCHES, "4", <HistoryOutlined />),
+  getItem(MenuBarOptions.MESSAGES, "5", <MessageFilled />),
+  getItem(MenuBarOptions.SETTINGS, "6", <SettingFilled />),
 ];
 
+const { Text, Title } = Typography;
 
 const MenuBar = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/')
-  }
-
 
   return (
     <Sider
-      collapsible
-      collapsed={collapsed}
-      onCollapse={(value) => setCollapsed(value)}
-      className='sider-bar'
+      breakpoint="lg"
+      collapsedWidth="0"
+      onBreakpoint={(broken) => {
+        console.log(broken);
+      }}
+      onCollapse={(collapsed, type) => {
+        console.log(collapsed, type);
+      }}
+      className="sider-bar"
     >
-      <div
-        onClick={handleClick}
-        style={{
-          height: 32,
-          margin: 16,
-          color: "black",
-          cursor: 'pointer',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: '20px',
-          borderBottom: '1px solid black'
-        }}
-      >
-          <Space>
-        </Space>
-       Home
-
+      <div className="profile_image">
+        <Avatar
+          size={175}
+          src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?b=1&s=170667a&w=0&k=20&c=Dl9uxPY_Xn159JiazEj0bknMkLxFdY7f4tK1GtOGmis="
+        />
+        <Title className="profile_title" level={4}>
+          Floyd Miles, 35
+        </Title>
+        <Text className="profile_text">Complete my profile</Text>
       </div>
+      <div className="proifle_counts">
+        <div className="profile_friends">
+          <Title className="profile_count_title" level={4}>
+            65
+          </Title>
+          <Text className="profile_count_text">Friends</Text>
+        </div>
+        <div className="profile_likes">
+          <Title className="profile_count_title" level={4}>
+            65
+          </Title>
+          <Text className="profile_count_text">Likes</Text>
+        </div>
+        <div className="profile_matches">
+          <Title className="profile_count_title" level={4}>
+            65
+          </Title>
+          <Text className="profile_count_text">Matches</Text>
+        </div>
+      </div>
+      <Space></Space>
+
       <Menu
         defaultSelectedKeys={["1"]}
         mode="inline"

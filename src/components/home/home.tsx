@@ -2,14 +2,14 @@ import './home.css';
 import React from 'react';
 import { Col, Row, Tabs } from 'antd';
 
-import { ListView } from '../listView';
+// import { ListView } from '../listView';
 import { CommonHeading } from '../../components';
 
 const Home: React.FC = () => {
   return (
     <div className="home-comp">
       <CommonHeading title={'Hi! User'} />
-      <Row>
+      {/* <Row>
         <Col  md={{ span: 9, offset: 15 }}>
           <Tabs type="card" className="home-tabs">
             <Tabs.TabPane tab="Chats" key="chats">
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
             </Tabs.TabPane>
           </Tabs>
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 };
