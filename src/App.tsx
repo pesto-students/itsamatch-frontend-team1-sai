@@ -39,7 +39,6 @@ const App: React.FC = () => {
               <Route path="/" index element={<Home />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
-            .
           </div>
         </Content>
       </Layout>

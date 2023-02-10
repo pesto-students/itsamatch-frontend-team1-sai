@@ -19,7 +19,7 @@ const items: MenuProps['items'] = [
 ];
 
 const NavBar: React.FC = () => {
-  const [current, setCurrent] = useState('mail');
+  const [current, setCurrent] = useState('');
   const navigate = useNavigate();
 
   const onClick: MenuProps['onClick'] = (e) => {

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Avatar, Layout, Menu, MenuProps, Space, Typography } from 'antd';
 import {
-  HeartFilled,
+  HeartOutlined,
   HistoryOutlined,
-  MessageFilled,
-  SettingFilled,
+  MessageOutlined,
+  SettingOutlined,
   UsergroupAddOutlined,
   UserOutlined,
 } from '@ant-design/icons';
@@ -35,12 +36,12 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem(MenuBarOptions.PROFILE, '1', <UserOutlined />),
-  getItem(MenuBarOptions.LIKES, '2', <HeartFilled />),
-  getItem(MenuBarOptions.USERS, '3', <UsergroupAddOutlined />),
-  getItem(MenuBarOptions.MATCHES, '4', <HistoryOutlined />),
-  getItem(MenuBarOptions.MESSAGES, '5', <MessageFilled />),
-  getItem(MenuBarOptions.SETTINGS, '6', <SettingFilled />),
+  getItem(MenuBarOptions.PROFILE, '/profile', <UserOutlined />),
+  getItem(MenuBarOptions.LIKES, '/likes', <HeartOutlined />),
+  getItem(MenuBarOptions.USERS, '/', <UsergroupAddOutlined />),
+  getItem(MenuBarOptions.MATCHES, '/matches', <HistoryOutlined />),
+  getItem(MenuBarOptions.MESSAGES, '/messages', <MessageOutlined />),
+  getItem(MenuBarOptions.SETTINGS, '/settings', <SettingOutlined />),
 ];
 
 const MenuBar = () => {
@@ -85,7 +86,19 @@ const MenuBar = () => {
   };
 
   const renderMenuBar = () => {
-    return <Menu defaultSelectedKeys={['1']} mode="inline" items={items} className="menu-bar" />;
+    const [current, setCurrent] = useState('/');
+    const navigate = useNavigate();
+
+    const handleClick: MenuProps['onClick'] = (e) => {
+      setCurrent(e.key);
+      navigate(e.key);
+    };
+
+    return (
+      <>
+        <Menu defaultSelectedKeys={[current]} mode="inline" items={items} className="menu-bar" onClick={handleClick} />
+      </>
+    );
   };
 
   return (
