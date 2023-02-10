@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form, Input, Button, DatePicker, Row, Col } from 'antd';
-import { CommonHeading } from '../commonHeading';
 
 const formItemLayout = {
   labelCol: {
@@ -35,9 +34,6 @@ const Register: React.FC = () => {
 
   return (
     <div className="register-form">
-      <CommonHeading
-        title={'Welcome! Start searching your partner with this Signup'}
-      />
 
       <Row>
         <Col span={24}>

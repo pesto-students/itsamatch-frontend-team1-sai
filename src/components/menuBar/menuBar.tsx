@@ -1,10 +1,6 @@
 import React from "react";
-
 import { Avatar, Menu, MenuProps, Layout, Space, Typography } from "antd";
-const { Sider } = Layout;
-
 import "./menuBar.css";
-
 import {
   HeartFilled,
   HistoryOutlined,
@@ -15,12 +11,16 @@ import {
 } from "@ant-design/icons";
 import { MenuBarOptions } from "../../utils";
 
+const { Sider } = Layout;
+const { Text, Title } = Typography;
+
 type MenuItem = Required<MenuProps>["items"][number];
 
 function getItem(
   label: React.ReactNode,
   key: React.Key,
   icon?: React.ReactNode,
+  path?: React.ReactNode,
   children?: MenuItem[]
 ): MenuItem {
   return {
@@ -28,6 +28,7 @@ function getItem(
     icon,
     children,
     label,
+    path,
   } as MenuItem;
 }
 
@@ -40,22 +41,9 @@ const items: MenuItem[] = [
   getItem(MenuBarOptions.SETTINGS, "6", <SettingFilled />),
 ];
 
-const { Text, Title } = Typography;
-
 const MenuBar = () => {
-
-  return (
-    <Sider
-      breakpoint="lg"
-      collapsedWidth="0"
-      onBreakpoint={(broken) => {
-        console.log(broken);
-      }}
-      onCollapse={(collapsed, type) => {
-        console.log(collapsed, type);
-      }}
-      className="sider-bar"
-    >
+  const renderProfileImage = () => {
+    return (
       <div className="profile_image">
         <Avatar
           size={175}
@@ -66,6 +54,11 @@ const MenuBar = () => {
         </Title>
         <Text className="profile_text">Complete my profile</Text>
       </div>
+    );
+  };
+
+  const renderProfileStats = () => {
+    return (
       <div className="proifle_counts">
         <div className="profile_friends">
           <Title className="profile_count_title" level={4}>
@@ -86,14 +79,36 @@ const MenuBar = () => {
           <Text className="profile_count_text">Matches</Text>
         </div>
       </div>
-      <Space></Space>
+    );
+  };
 
+  const renderMenuBar = () => {
+    return (
       <Menu
         defaultSelectedKeys={["1"]}
         mode="inline"
         items={items}
         className="menu-bar"
       />
+    );
+  };
+
+  return (
+    <Sider
+      breakpoint="lg"
+      collapsedWidth="0"
+      onBreakpoint={(broken) => {
+        console.log(broken);
+      }}
+      onCollapse={(collapsed, type) => {
+        console.log(collapsed, type);
+      }}
+      className="sider-bar"
+    >
+      {renderProfileImage()}
+      {renderProfileStats()}
+      <Space></Space>
+      {renderMenuBar()}
     </Sider>
   );
 };
