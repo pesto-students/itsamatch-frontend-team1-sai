@@ -1,6 +1,6 @@
-import React from "react";
-import { Avatar, Menu, MenuProps, Layout, Space, Typography } from "antd";
-import "./menuBar.css";
+import React from 'react';
+
+import { Avatar, Layout, Menu, MenuProps, Space, Typography } from 'antd';
 import {
   HeartFilled,
   HistoryOutlined,
@@ -8,13 +8,15 @@ import {
   SettingFilled,
   UsergroupAddOutlined,
   UserOutlined,
-} from "@ant-design/icons";
-import { MenuBarOptions } from "../../utils";
+} from '@ant-design/icons';
+
+import './menuBar.css';
+import { MenuBarOptions } from '../../utils';
 
 const { Sider } = Layout;
 const { Text, Title } = Typography;
 
-type MenuItem = Required<MenuProps>["items"][number];
+type MenuItem = Required<MenuProps>['items'][number];
 
 function getItem(
   label: React.ReactNode,
@@ -33,12 +35,12 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem(MenuBarOptions.PROFILE, "1", <UserOutlined />),
-  getItem(MenuBarOptions.LIKES, "2", <HeartFilled />),
-  getItem(MenuBarOptions.USERS, "3", <UsergroupAddOutlined />),
-  getItem(MenuBarOptions.MATCHES, "4", <HistoryOutlined />),
-  getItem(MenuBarOptions.MESSAGES, "5", <MessageFilled />),
-  getItem(MenuBarOptions.SETTINGS, "6", <SettingFilled />),
+  getItem(MenuBarOptions.PROFILE, '1', <UserOutlined />),
+  getItem(MenuBarOptions.LIKES, '2', <HeartFilled />),
+  getItem(MenuBarOptions.USERS, '3', <UsergroupAddOutlined />),
+  getItem(MenuBarOptions.MATCHES, '4', <HistoryOutlined />),
+  getItem(MenuBarOptions.MESSAGES, '5', <MessageFilled />),
+  getItem(MenuBarOptions.SETTINGS, '6', <SettingFilled />),
 ];
 
 const MenuBar = () => {
@@ -83,14 +85,7 @@ const MenuBar = () => {
   };
 
   const renderMenuBar = () => {
-    return (
-      <Menu
-        defaultSelectedKeys={["1"]}
-        mode="inline"
-        items={items}
-        className="menu-bar"
-      />
-    );
+    return <Menu defaultSelectedKeys={['1']} mode="inline" items={items} className="menu-bar" />;
   };
 
   return (

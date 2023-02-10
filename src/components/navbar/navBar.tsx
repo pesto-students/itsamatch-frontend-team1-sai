@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { UserAddOutlined, LoginOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+
+import { Menu } from 'antd';
+import { LoginOutlined, UserAddOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
 
 const items: MenuProps['items'] = [
   {
@@ -26,14 +27,7 @@ const NavBar: React.FC = () => {
     navigate(e.key);
   };
 
-  return (
-    <Menu
-      onClick={onClick}
-      selectedKeys={[current]}
-      mode="horizontal"
-      items={items}
-    />
-  );
+  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
 };
 
 export default NavBar;
