@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Checkbox, Row, Col } from 'antd';
+import { Button, Col, Form, Input, Row } from 'antd';
 
 const formItemLayout = {
   labelCol: {
@@ -23,7 +23,7 @@ const tailFormItemLayout = {
       offset: 8,
     },
     lg: {
-      span: 4,
+      span: 6,
       offset: 8,
     },
   },
@@ -32,35 +32,22 @@ const tailFormItemLayout = {
 const Login: React.FC = () => {
   return (
     <div className="login-form">
-
       <Row>
         <Col span={24}>
           <Form {...formItemLayout} name="normal_login" className="login-form">
-            <Form.Item
-              label="E-mail"
-              name="email"
-              rules={[
-                { required: true, message: 'Please input your Username!' },
-              ]}
-            >
+            <Form.Item label="E-mail" name="email" rules={[{ required: true, message: 'Please input your Username!' }]}>
               <Input placeholder="Username" />
             </Form.Item>
             <Form.Item
               name="password"
               label="Password"
-              rules={[
-                { required: true, message: 'Please input your Password!' },
-              ]}
+              rules={[{ required: true, message: 'Please input your Password!' }]}
             >
               <Input type="password" placeholder="Password" />
             </Form.Item>
 
             <Form.Item {...tailFormItemLayout}>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button"
-              >
+              <Button type="primary" htmlType="submit" className="login-form-button">
                 Log in
               </Button>
             </Form.Item>

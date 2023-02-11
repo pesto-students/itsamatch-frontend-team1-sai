@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, DatePicker, Row, Col } from 'antd';
+import { Button, Col, DatePicker, Form, Input, Row } from 'antd';
 
 const formItemLayout = {
   labelCol: {
@@ -34,15 +34,9 @@ const Register: React.FC = () => {
 
   return (
     <div className="register-form">
-
       <Row>
         <Col span={24}>
-          <Form
-            {...formItemLayout}
-            autoComplete="off"
-            form={form}
-            name="register"
-          >
+          <Form {...formItemLayout} autoComplete="off" form={form} name="register">
             <Form.Item
               label="E-mail"
               name="email"
@@ -80,11 +74,7 @@ const Register: React.FC = () => {
                     if (!value || getFieldValue('password') === value) {
                       return Promise.resolve();
                     }
-                    return Promise.reject(
-                      new Error(
-                        'The two passwords that you entered do not match!'
-                      )
-                    );
+                    return Promise.reject(new Error('The two passwords that you entered do not match!'));
                   },
                 }),
               ]}
@@ -102,11 +92,7 @@ const Register: React.FC = () => {
               <Input placeholder="Type your fisrt name" />
             </Form.Item>
 
-            <Form.Item
-              label="Last Name"
-              name="last_name"
-              rules={[{ required: true, message: 'Type your last name' }]}
-            >
+            <Form.Item label="Last Name" name="last_name" rules={[{ required: true, message: 'Type your last name' }]}>
               <Input placeholder="Type your last name" />
             </Form.Item>
 
@@ -115,11 +101,7 @@ const Register: React.FC = () => {
               name="dob"
               rules={[{ required: true, message: 'Select your date of birth' }]}
             >
-              <DatePicker
-                picker="date"
-                placeholder="Choose date of birth"
-                style={{ width: '100%' }}
-              />
+              <DatePicker picker="date" placeholder="Choose date of birth" style={{ width: '100%' }} />
             </Form.Item>
 
             <Form.Item {...tailFormItemLayout}>

@@ -1,21 +1,23 @@
-import React from "react";
-import { Avatar, Menu, MenuProps, Layout, Space, Typography } from "antd";
-import styles from "./menuBar.module.css";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Avatar, Menu, MenuProps, Layout, Space, Typography } from 'antd';
+import styles from './menuBar.module.css';
 
 import {
-  HeartFilled,
+  HeartOutlined,
   HistoryOutlined,
-  MessageFilled,
-  SettingFilled,
+  MessageOutlined,
+  SettingOutlined,
   UsergroupAddOutlined,
   UserOutlined,
-} from "@ant-design/icons";
-import { MenuBarOptions } from "../../utils";
+} from '@ant-design/icons';
+
+import { MenuBarOptions } from '../../utils';
 
 const { Sider } = Layout;
 const { Text, Title } = Typography;
 
-type MenuItem = Required<MenuProps>["items"][number];
+type MenuItem = Required<MenuProps>['items'][number];
 
 function getItem(
   label: React.ReactNode,
@@ -34,12 +36,12 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem(MenuBarOptions.PROFILE, "1", <UserOutlined />),
-  getItem(MenuBarOptions.LIKES, "2", <HeartFilled />),
-  getItem(MenuBarOptions.USERS, "3", <UsergroupAddOutlined />),
-  getItem(MenuBarOptions.MATCHES, "4", <HistoryOutlined />),
-  getItem(MenuBarOptions.MESSAGES, "5", <MessageFilled />),
-  getItem(MenuBarOptions.SETTINGS, "6", <SettingFilled />),
+  getItem(MenuBarOptions.PROFILE, '/profile', <UserOutlined />),
+  getItem(MenuBarOptions.LIKES, '/likes', <HeartOutlined />),
+  getItem(MenuBarOptions.USERS, '/', <UsergroupAddOutlined />),
+  getItem(MenuBarOptions.MATCHES, '/matches', <HistoryOutlined />),
+  getItem(MenuBarOptions.MESSAGES, '/messages', <MessageOutlined />),
+  getItem(MenuBarOptions.SETTINGS, '/settings', <SettingOutlined />),
 ];
 
 const MenuBar = () => {
@@ -84,13 +86,18 @@ const MenuBar = () => {
   };
 
   const renderMenuBar = () => {
+    const [current, setCurrent] = useState('/');
+    const navigate = useNavigate();
+
+    const handleClick: MenuProps['onClick'] = (e) => {
+      setCurrent(e.key);
+      navigate(e.key);
+    };
+
     return (
-      <Menu
-        defaultSelectedKeys={["1"]}
-        mode="inline"
-        items={items}
-        className="menu-bar"
-      />
+      <>
+        <Menu defaultSelectedKeys={[current]} mode="inline" items={items} className="menu-bar" onClick={handleClick} />
+      </>
     );
   };
 

@@ -1,38 +1,33 @@
-import React, { useState } from "react";
-import { Button, Col, Image, Row, Space, Tag, Typography, Upload } from "antd";
-import ImgCrop from "antd-img-crop";
-import type { RcFile, UploadFile, UploadProps } from "antd/es/upload/interface";
-import {
-  PushpinFilled,
-  CloseOutlined,
-  HeartFilled,
-  TwitterOutlined,
-} from "@ant-design/icons";
+import React, { useState } from 'react';
+import { Button, Col, Image, Row, Space, Tag, Typography, Upload } from 'antd';
+import ImgCrop from 'antd-img-crop';
+import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
+import { PushpinFilled, CloseOutlined, HeartFilled, TwitterOutlined } from '@ant-design/icons';
 
-import "./home.css";
+import './home.css';
 
 const img_url =
-  "https://images.unsplash.com/photo-1533973427779-4b8c2eb4c3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60";
+  'https://images.unsplash.com/photo-1533973427779-4b8c2eb4c3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
 
 const { Text, Title } = Typography;
 
 const Home: React.FC = () => {
   const [fileList, setFileList] = useState<UploadFile[]>([
     {
-      uid: "-1",
-      name: "image.png",
-      status: "done",
+      uid: '-1',
+      name: 'image.png',
+      status: 'done',
       url: img_url,
     },
     {
-      uid: "-2",
-      name: "image.png",
-      status: "done",
+      uid: '-2',
+      name: 'image.png',
+      status: 'done',
       url: img_url,
     },
   ]);
 
-  const onChange: UploadProps["onChange"] = ({ fileList: newFileList }) => {
+  const onChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
     setFileList(newFileList);
   };
 
@@ -76,9 +71,8 @@ const Home: React.FC = () => {
           About
         </Title>
         <Text className="about_text">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+          velit mollit. Exercitation veniam consequat sunt nostrud amet.
         </Text>
       </Col>
     );
@@ -153,18 +147,8 @@ const Home: React.FC = () => {
       <Col span={24}>
         <Image src={img_url} />
         <Space className="profile_buttons" size={48}>
-          <Button
-            className="profile_reject"
-            shape="circle"
-            icon={<CloseOutlined />}
-            size="large"
-          />
-          <Button
-            className="profile_like"
-            shape="circle"
-            icon={<HeartFilled />}
-            size="large"
-          />
+          <Button className="profile_reject" shape="circle" icon={<CloseOutlined />} size="large" />
+          <Button className="profile_like" shape="circle" icon={<HeartFilled />} size="large" />
         </Space>
       </Col>
     );
@@ -181,7 +165,7 @@ const Home: React.FC = () => {
             onChange={onChange}
             onPreview={onPreview}
           >
-            {fileList.length < 3 && "+ Upload"}
+            {fileList.length < 3 && '+ Upload'}
           </Upload>
         </ImgCrop>
       </Col>
