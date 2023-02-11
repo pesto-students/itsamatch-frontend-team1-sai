@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import logo from '../src/assets/images/logo_with_name.svg';
 import { Layout } from 'antd';
+import { MenuBar } from './components';
+import { Home, Login, PageNotFound, Register } from './pages';
+import styles from './App.module.css';
 
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
-
-import './App.css';
-import { MenuBar, NavBar } from './components';
-import { Home, Login, PageNotFound, Register } from './pages';
 
 const { Content, Footer, Header } = Layout;
 
@@ -19,9 +19,11 @@ Sentry.init({
 
 const App: React.FC = () => {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <Header style={{ padding: 0 }}>
-        <NavBar />
+    <Layout className="layout">
+      <Header className={styles.header_layout}>
+        <div className={styles.logo}>
+          <img src={logo} alt="img" />
+        </div>
       </Header>
 
       <Layout className="site-layout">

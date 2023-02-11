@@ -1,0 +1,11 @@
+.header_layout {
+  padding-inline: 20px !important;
+  background: white !important;
+}
+
+.logo {
+  float: left;
+  display: flex;
+  height: 32px;
+  margin: 8px 24px 16px 0;
+}
