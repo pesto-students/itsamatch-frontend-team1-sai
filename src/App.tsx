@@ -6,8 +6,8 @@ import { Layout } from "antd";
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 
-import { MenuBar, NavBar, PageNotFound } from "./components";
-import { Home, Login, Register } from "./pages";
+import { MenuBar, NavBar } from "./components";
+import { Home, Login, Register, PageNotFound } from "./pages";
 
 const { Content, Footer, Header } = Layout;
 
