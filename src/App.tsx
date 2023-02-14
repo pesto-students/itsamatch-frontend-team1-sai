@@ -4,7 +4,7 @@ import logo from '../src/assets/images/logo_with_name.svg';
 import { Layout } from 'antd';
 import { MenuBar } from './components';
 import { Home, Login, PageNotFound, Register } from './pages';
-import styles from './App.module.css';
+import styles from './App.module.scss';
 
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
@@ -26,22 +26,15 @@ const App: React.FC = () => {
         </div>
       </Header>
 
-      <Layout className="site-layout">
+      <Layout className={styles.site_layout}>
         <MenuBar />
-        <Content style={{ margin: '0 16px' }}>
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-            }}
-          >
-            <Routes>
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/" index element={<Home />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </div>
+        <Content className={styles.site_content}>
+          <Routes>
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" index element={<Home />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
         </Content>
       </Layout>
       <Footer style={{ textAlign: 'center' }}>Dating App &copy;2023</Footer>

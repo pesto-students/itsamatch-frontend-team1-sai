@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Avatar, Menu, MenuProps, Layout, Space, Typography } from 'antd';
-import styles from './menuBar.module.css';
+import styles from './MenuBar.module.scss';
 
 import {
   HeartOutlined,
@@ -62,20 +62,20 @@ const MenuBar = () => {
 
   const renderProfileStats = () => {
     return (
-      <div className={styles.proifle_stats}>
-        <div className="profile_friends">
+      <div className={styles.profile_stats}>
+        <div className={styles.profile_friends}>
           <Title className={styles.profile_count_title} level={4}>
             65
           </Title>
           <Text className={styles.profile_count_text}>Friends</Text>
         </div>
-        <div className="profile_likes">
+        <div className={styles.profile_likes}>
           <Title className={styles.profile_count_title} level={4}>
             65
           </Title>
           <Text className={styles.profile_count_text}>Likes</Text>
         </div>
-        <div className="profile_matches">
+        <div className={styles.profile_matches}>
           <Title className={styles.profile_count_title} level={4}>
             65
           </Title>
@@ -96,13 +96,20 @@ const MenuBar = () => {
 
     return (
       <>
-        <Menu defaultSelectedKeys={[current]} mode="inline" items={items} className="menu-bar" onClick={handleClick} />
+        <Menu
+          defaultSelectedKeys={[current]}
+          mode="inline"
+          items={items}
+          className={styles.menu_bar}
+          onClick={handleClick}
+        />
       </>
     );
   };
 
   return (
     <Sider
+      theme="light"
       breakpoint="lg"
       collapsedWidth="0"
       onBreakpoint={(broken) => {
@@ -111,7 +118,7 @@ const MenuBar = () => {
       onCollapse={(collapsed, type) => {
         console.log(collapsed, type);
       }}
-      className="sider-bar"
+      className={styles.sider_bar}
     >
       {renderProfileImage()}
       {renderProfileStats()}

@@ -1,23 +1,23 @@
-.home-comp .ant-image {
+.home_comp .ant-image {
   width: 100% !important;
 }
 
-.home-comp .ant-upload-list {
+.home_comp .ant-upload-list {
   margin-top: 60px;
   text-align: center;
 }
 
-.home-comp .profile_location {
+.home_comp .profile_location {
   color: #9c8aa5;
   border: none;
 }
 
-.home-comp .profile_title {
+.home_comp .profile_title {
   margin-bottom: 0.2em !important;
   color: #923f78 !important;
 }
 
-.home-comp .profile_text {
+.home_comp .profile_text {
   margin-bottom: 1.2em;
   color: #9c8aa5;
   background: #eef2ff;
@@ -25,18 +25,18 @@
   border-radius: 8px;
 }
 
-.home-comp .about_text {
+.home_comp .about_text {
   margin-bottom: 1.2em;
   color: #9c8aa5 !important;
   font-size: 0.8em;
 }
 
-.home-comp .profile_svg {
+.home_comp .profile_svg {
   height: 1.6em !important;
   width: 1.6em !important;
 }
 
-.home-comp .profile_buttons {
+.home_comp .profile_buttons {
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -44,17 +44,17 @@
   color: white;
   cursor: pointer;
 }
-.home-comp .profile_buttons .ant-btn-circle {
+.home_comp .profile_buttons .ant-btn-circle {
   width: 80px !important;
   height: 80px !important;
 }
 
-.home-comp .profile_buttons .profile_reject {
+.home_comp .profile_buttons .profile_reject {
   background-color: #923f78 !important;
   color: white !important;
   border: none;
 }
-.home-comp .profile_buttons .profile_like {
+.home_comp .profile_buttons .profile_like {
   background-color: white !important;
   color: #923f78 !important;
   border: none;

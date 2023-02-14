@@ -9,3 +9,12 @@
   height: 32px;
   margin: 8px 24px 16px 0;
 }
+
+
+.site_layout{
+  :global{
+    .ant-layout-content{
+      margin: 0 16px;
+    }
+  }
+}

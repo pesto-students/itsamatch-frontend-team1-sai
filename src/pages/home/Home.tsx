@@ -173,7 +173,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="home-comp">
+    <div className="home_comp">
       <Row gutter={[48, 48]}>
         <Col xs={24} sm={24} md={16} lg={16} xl={16}>
           <Row justify="center" align="middle" className="user_main_photo">
