@@ -10,7 +10,7 @@ interface IColProps {
   xl?: number;
   xxl?: number;
   flex?: string;
-  children?: React.ReactNode;
+  children?: string | JSX.Element | JSX.Element[];
   span?: number;
 }
 

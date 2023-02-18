@@ -10,8 +10,7 @@ const { Text: AntdText } = Typography;
 interface ITextProps {
   className?: string;
   type?: BaseType | undefined;
-  // children: string | JSX.Element | JSX.Element[];
-  children: React.ReactNode;
+  children: string | JSX.Element | JSX.Element[];
 }
 
 const Text: FunctionComponent<ITextProps> = ({ className, type, children, ...restProps }) => {

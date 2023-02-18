@@ -7,7 +7,7 @@ interface IRowProps {
   gutter?: number | [number, number];
   justify?: 'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly';
   wrap?: boolean;
-  children?: React.ReactNode;
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 const Row: FunctionComponent<IRowProps> = ({ className, children, ...restProps }) => {

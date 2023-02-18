@@ -5,7 +5,7 @@ interface ISpaceProps {
   className?: string;
   wrap?: boolean;
   size?: 'small' | 'middle' | 'large' | number | [number, number];
-  children?: React.ReactNode;
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 const Space: FunctionComponent<ISpaceProps> = ({ ...restProps }) => {

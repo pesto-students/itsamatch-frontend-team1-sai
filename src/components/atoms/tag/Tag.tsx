@@ -5,7 +5,7 @@ import { FacebookOutlined, LinkedinOutlined, TwitterOutlined, YoutubeOutlined } 
 interface ITagProps {
   className?: string;
   icon?: React.ReactNode;
-  children: React.ReactNode;
+  children: string | JSX.Element | JSX.Element[];
 }
 
 const iconMap = {

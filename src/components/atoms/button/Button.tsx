@@ -8,7 +8,7 @@ interface IButtonProps {
   size?: 'large' | 'middle' | 'small';
   icon?: React.ReactNode;
   href?: string;
-  children?: React.ReactNode;
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 const Button: FunctionComponent<IButtonProps> = ({ ...restProps }) => {
