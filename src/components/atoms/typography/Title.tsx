@@ -14,7 +14,7 @@ interface ITitleProps {
 }
 
 const Title: FunctionComponent<ITitleProps> = ({ className, level, children, ...restProps }) => {
-  const titleClassName = cx(styles.profile_title, className);
+  const titleClassName = cx(styles.title_class, className);
   return (
     <AntdTitle {...restProps} level={level} className={titleClassName}>
       {children}

@@ -11,6 +11,7 @@ interface ITextProps {
   className?: string;
   type?: BaseType | undefined;
   children: string | JSX.Element | JSX.Element[];
+  onClick?: () => void;
 }
 
 const Text: FunctionComponent<ITextProps> = ({ className, type, children, ...restProps }) => {

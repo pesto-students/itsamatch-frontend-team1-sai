@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
-import { Button, Col, Image, Text, Tag, Title, Space, Row } from '../../components/atoms';
+import {
+  Button,
+  Col,
+  Image,
+  Text,
+  Tag,
+  Title,
+  Space,
+  Row,
+  CloseOutlined,
+  HeartFilled,
+  TwitterOutlined,
+  PushpinFilled,
+} from '../../components/atoms';
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
-import { CloseOutlined, HeartFilled, TwitterOutlined } from '@ant-design/icons';
 
 import styles from './Home.module.scss';
 
@@ -73,8 +85,10 @@ const Home: React.FC = () => {
     return (
       <>
         <Col>
-          <Title level={3}>Mabelle, 30</Title>
-          <Tag icon="twitter " className={styles.profile_location}>
+          <Title className={styles.user_profile_title} level={3}>
+            Mabelle, 30
+          </Title>
+          <Tag icon={<PushpinFilled />} className={styles.profile_location}>
             Atlanta, USA
           </Tag>
         </Col>
@@ -85,7 +99,9 @@ const Home: React.FC = () => {
   const renderAboutUser = () => {
     return (
       <Col>
-        <Title level={4}>About</Title>
+        <Title className={styles.user_profile_title} level={4}>
+          About
+        </Title>
         <Text className={styles.user_profile_text}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
           velit mollit. Exercitation veniam consequat sunt nostrud amet.
@@ -97,7 +113,9 @@ const Home: React.FC = () => {
   const renderUserInfo = () => {
     return (
       <Col>
-        <Title level={4}>Mabelle's Info</Title>
+        <Title className={styles.user_profile_title} level={4}>
+          Mabelle's Info
+        </Title>
         <Text className={styles.user_profile_text}>
           <Space size={[0, 8]} wrap>
             <Tag icon={<TwitterOutlined />} className={styles.user_tags}>
@@ -127,7 +145,7 @@ const Home: React.FC = () => {
   const renderUserInterests = () => {
     return (
       <Col>
-        <Title className="profile_title" level={4}>
+        <Title className={styles.user_profile_title} level={4}>
           Interest
         </Title>
         <Text className={styles.user_profile_text}>

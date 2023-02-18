@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Avatar, Menu, MenuProps, Layout, Space, Typography } from 'antd';
+import { Menu, MenuProps, Layout } from 'antd';
+import { Avatar, Text, Title } from '../../components/atoms';
 import styles from './MenuBar.module.scss';
 
 import {
@@ -15,7 +16,6 @@ import {
 import { MenuBarOptions } from '../../utils';
 
 const { Sider } = Layout;
-const { Text, Title } = Typography;
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -44,42 +44,48 @@ const items: MenuItem[] = [
   getItem(MenuBarOptions.SETTINGS, '/settings', <SettingOutlined />),
 ];
 
+const img_url =
+  'https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?b=1&s=170667a&w=0&k=20&c=Dl9uxPY_Xn159JiazEj0bknMkLxFdY7f4tK1GtOGmis=';
+
 const MenuBar = () => {
   const renderProfileImage = () => {
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate('/editmyprofile');
+    };
+
     return (
-      <div className={styles.profile_image}>
-        <Avatar
-          size={175}
-          src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?b=1&s=170667a&w=0&k=20&c=Dl9uxPY_Xn159JiazEj0bknMkLxFdY7f4tK1GtOGmis="
-        />
-        <Title className={styles.profile_title} level={4}>
-          Floyd Miles, 35
-        </Title>
-        <Text className={styles.profile_text}>Complete my profile</Text>
+      <div className={styles.my_profile_image_container}>
+        <Avatar size={190} src={img_url} />
+        <Title level={4}>Floyd Miles, 35</Title>
+        <Text className={styles.my_profile_text} onClick={handleClick}>
+          Complete my profile
+        </Text>
       </div>
     );
   };
 
   const renderProfileStats = () => {
     return (
-      <div className={styles.profile_stats}>
+      <div className={styles.my_profile_stats}>
         <div className={styles.profile_friends}>
-          <Title className={styles.profile_count_title} level={4}>
+          <Title className={styles.my_profile_count_title} level={4}>
             65
           </Title>
-          <Text className={styles.profile_count_text}>Friends</Text>
+          <Text className={styles.my_profile_count_text}>Friends</Text>
         </div>
         <div className={styles.profile_likes}>
-          <Title className={styles.profile_count_title} level={4}>
+          <Title className={styles.my_profile_count_title} level={4}>
             65
           </Title>
-          <Text className={styles.profile_count_text}>Likes</Text>
+          <Text className={styles.my_profile_count_text}>Likes</Text>
         </div>
         <div className={styles.profile_matches}>
-          <Title className={styles.profile_count_title} level={4}>
+          <Title className={styles.my_profile_count_title} level={4}>
             65
           </Title>
-          <Text className={styles.profile_count_text}>Matches</Text>
+          <Text className={styles.my_profile_count_text}>Matches</Text>
         </div>
       </div>
     );
@@ -122,7 +128,6 @@ const MenuBar = () => {
     >
       {renderProfileImage()}
       {renderProfileStats()}
-      <Space></Space>
       {renderMenuBar()}
     </Sider>
   );
