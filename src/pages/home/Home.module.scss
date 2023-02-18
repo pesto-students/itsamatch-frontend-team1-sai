@@ -1,129 +1,110 @@
-.profile_title{
+.home_comp{
+  padding: 24px !important;
+}
+
+.home_comp{
   :global{
-    .ant-typography{
-      color: red;
+    .ant-image {
+     width: 100% !important;
     }
   }
 }
 
+.home_comp {
+  :global{
+    .ant-upload-list {
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+}
 
-// .home_comp{
-//   padding: 24px !important
-// }
+.user_profile_text {
+  margin-bottom: 1.2em;
+  color: #9c8aa5 !important;
+  font-size: 0.8em;
+}
 
+.profile_location{
+  color: #9c8aa5;
+  border: none;
+  background: #eef2ff;
+}
 
-// .home_comp{
+.user_main_photo{
+  width: 100%;
+}
+
+.user_tags{
+  background:#9c8aa5;
+  color: white;
+}
+
+.profile_buttons {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  cursor: pointer;
+}
+
+.profile_buttons{
+  :global{
+    .ant-btn-circle {
+      width: 80px !important;
+      height: 80px;
+    }
+  }
+}
+
+// .profile_buttons{
 //   :global{
-//     .ant-image {
-//       width: 100% !important;
-//     }  
-//   }
-// }
-
-// .home_comp{
-//   :global{
-//     .ant-upload-list {
-//       margin-top: 60px;
-//       text-align: center;
-//     }  
-//   }
-// }
-
-// .home_comp{
-//   :global{
-//     .profile_location {
-//       color: #9c8aa5;
-//       border: none;
-//     }  
-//   }
-// } 
-
-// // .home_comp{
-// //   :global{
-// //     .profile_title {
-// //       margin-bottom: 0.2em !important;
-// //       color: #923f78 !important;
-// //     }  
-// //   }
-// // }
-
-// .profile_title{
-//   :global(.ant-typography )
-//     {
-//       margin-bottom: 1.2em;
-//       color: #9c8aa5 !important;
-//       background: #eef2ff;
-//       padding: 0.4em;
-//       border-radius: 8px;
-//     }  
-// } 
-
-// .home_comp{
-//   :global{
-//     .about_text {
-//       margin-bottom: 1.2em;
-//       color: #9c8aa5 !important;
-//       font-size: 0.8em;
-//     }  
-//   }
-// } 
-
-// .home_comp{
-//   :global{
-//     .profile_svg {
-//       height: 1.6em !important;
-//       width: 1.6em !important;
-//     }  
-//   }
-// } 
-
-// .home_comp{
-//   :global{
-//     .profile_buttons {
-//     // .ant-space {
-//       position: absolute;
-//       bottom: 0px;
-//       left: 50%;
-//       transform: translate(-50%, 50%);
-//       color: white;
-//       cursor: pointer;
-//     }  
-//   }
-// } 
-
-
-// .home_comp{
-//   :global{
-//     .profile_buttons{
-//     // .ant-space{
-//       .ant-btn-circle {
-//         width: 80px !important;
-//         height: 80px !important;
-//       } 
-//     }  
-//   }
-// }
-
-// .home_comp{
-//   :global{
-//     .profile_buttons {
-//       .profile_reject {
-//         background-color: #923f78 !important;
-//         color: white !important;
-//         border: none;
-//       }  
+//     svg {
+//       width: 1.4em;
+//       height: 1.4em;
 //     }
 //   }
 // }
 
-// .home_comp{
-//   :global{
-//     .profile_buttons{
-//       .profile_like {
-//         background-color: white !important;
-//         color: #923f78 !important;
-//         border: none;
-//       }
-//     }
-//   }
-// } 
+.profile_reject {
+  background-color: #923f78 !important;
+  color: white !important;
+  border: none;
+}
+
+.profile_like {
+  background-color: white !important;
+  color: #923f78 !important;
+  border: none;
+}
+
+
+// css for website responsiveness
+@media only screen and (max-width: 768px){
+  .profile_buttons{
+    :global{
+      .ant-btn-circle {
+        width: inherit !important;
+        height: inherit;
+      }
+    }
+
+    .profile_buttons{
+      :global{
+        svg {
+          width: 0.8em !important;
+          height: 0.8em !important;
+        }
+      }
+    }
+
+  }}
+
+
+
+
+
+
+
+
