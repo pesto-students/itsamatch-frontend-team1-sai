@@ -6,6 +6,7 @@ interface ISpaceProps {
   wrap?: boolean;
   size?: 'small' | 'middle' | 'large' | number | [number, number];
   children?: string | JSX.Element | JSX.Element[];
+  direction?: 'vertical' | 'horizontal';
 }
 
 const Space: FunctionComponent<ISpaceProps> = ({ ...restProps }) => {

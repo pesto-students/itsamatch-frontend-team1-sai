@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import logo from '../src/assets/images/logo_with_name.svg';
 import { Layout } from 'antd';
 import { MenuBar } from './components';
-import { Home, Login, PageNotFound, Register } from './pages';
+import { EditProfilePage, Home, Login, PageNotFound, Register } from './pages';
 import styles from './App.module.scss';
 
 import * as Sentry from '@sentry/react';
@@ -30,6 +30,7 @@ const App: React.FC = () => {
         <MenuBar />
         <Content className={styles.site_content}>
           <Routes>
+            <Route path="/editmyprofile" element={<EditProfilePage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/" index element={<Home />} />
