@@ -58,10 +58,9 @@ const Home: React.FC = () => {
           reader.onload = () => resolve(reader.result as string);
         });
       }
-      const image = new Image();
-      image.src = src;
+      const image = Image({ src });
       const imgWindow = window.open(src);
-      imgWindow?.document.write(image.outerHTML);
+      imgWindow?.document.write(image?.props.outerHTML);
     };
 
     return (
