@@ -29,6 +29,7 @@ import {
   InfoCircleOutlined,
   CloseOutlined,
   PushpinFilled,
+  MessageOutlined,
 } from '@ant-design/icons';
 
 export {
@@ -62,4 +63,5 @@ export {
   InfoCircleOutlined,
   CloseOutlined,
   PushpinFilled,
+  MessageOutlined,
 };
