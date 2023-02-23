@@ -1,4 +1,5 @@
 import {
+  CheckOutlined,
   CloudUploadOutlined,
   FacebookFilled,
   InstagramOutlined,
@@ -33,6 +34,7 @@ import {
 } from '@ant-design/icons';
 
 export {
+  CheckOutlined,
   DownOutlined,
   EditOutlined,
   DeleteOutlined,

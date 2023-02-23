@@ -1,18 +1,18 @@
 import { FunctionComponent } from 'react';
 
-import { Button, Card, CloseOutlined, MessageOutlined, PushpinFilled, Space, Tag, Title } from '../../atoms';
-import styles from './matchCard.module.scss';
+import styles from './likeCard.module.scss';
+import { Button, Card, CheckOutlined, CloseOutlined, PushpinFilled, Space, Tag, Title } from '../../atoms';
 
 const { Meta } = Card;
 
-const MatchCard: FunctionComponent = () => {
+const LikeCard: FunctionComponent = () => {
   const imageUrl =
     'https://images.unsplash.com/photo-1533973427779-4b8c2eb4c3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
 
   return (
-    <div className={styles.match_card}>
+    <div className={styles.like_card}>
       <Card style={{ padding: 12 }} cover={<img alt="example" src={imageUrl} />}>
-        <div className={styles.match_card_body}>
+        <div className={styles.like_card_body}>
           <div>
             <Meta
               title={<Title level={4}>Girl,25 </Title>}
@@ -27,7 +27,7 @@ const MatchCard: FunctionComponent = () => {
           <div>
             <Space size={12}>
               <Button className={styles.profile_reject} shape="circle" icon={<CloseOutlined />} size="large" />
-              <Button className={styles.profile_message} shape="circle" icon={<MessageOutlined />} size="large" />
+              <Button className={styles.profile_message} shape="circle" icon={<CheckOutlined />} size="large" />
             </Space>
           </div>
         </div>
@@ -36,4 +36,4 @@ const MatchCard: FunctionComponent = () => {
   );
 };
 
-export default MatchCard;
+export default LikeCard;

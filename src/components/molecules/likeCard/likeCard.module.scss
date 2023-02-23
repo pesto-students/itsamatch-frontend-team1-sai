@@ -1,9 +1,9 @@
-.match_card {
+.like_card {
   width: 300px;
   margin-bottom: 20px;
 }
 
-.match_card_body {
+.like_card_body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   border: none;
 }
 
-.profile_message {
+.profile_accept {
   background: white !important;
   color: #923f78 !important;
   border: 1px solid #923f78;
