@@ -8,13 +8,13 @@ function Likes() {
     <div className={styles.likes_card_container}>
       {Array.apply(null, { length: 4 }).map((e, i) => (
         <Row key={i} gutter={48}>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8}>
             <LikeCard></LikeCard>
           </Col>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8}>
             <LikeCard></LikeCard>
           </Col>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8}>
             <LikeCard></LikeCard>
           </Col>
         </Row>

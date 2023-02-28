@@ -5,6 +5,8 @@ export * from './grid';
 export * from './icon';
 export * from './input';
 export * from './image';
+export * from './layout';
+export * from './menu';
 export * from './radio';
 export * from './select';
 export * from './space';

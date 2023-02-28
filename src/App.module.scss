@@ -1,5 +1,4 @@
 .header_layout {
-  padding-inline: 20px !important;
   background: white !important;
 }
 
@@ -8,8 +7,8 @@
 .logo {
   float: left;
   display: flex;
-  height: 32px;
-  margin: 8px 24px 16px 0;
+  height: 36px;
+  margin: 12px 0;
 }
 
 
@@ -17,3 +16,29 @@
   overflow: hidden;
   height: 100%;
 }
+
+.layout_header {
+  :global {
+    .ant-layout-sider {
+      padding: 0 32px;
+      width: 300px !important;
+      max-width: 300px !important;
+      min-width: 300px !important;
+    }
+  }
+}
+
+// css for website responsiveness
+
+// TODO:- Resposive of sidebar needs to be done 
+// @media only screen and (max-width: 768px){
+//   .layout_header {
+//     :global {
+//       .ant-layout-sider {
+//         width: 0 !important;
+//         max-width: 0px !important;
+//         min-width: 0px !important;
+//       }
+//     }
+//   }
+// }

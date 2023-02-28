@@ -1,5 +1,7 @@
 .home_comp{
-  padding: 24px !important;
+  padding: 28px 56px !important;
+  overflow: auto;
+  height: 100%;
 }
 
 .home_comp{
@@ -58,15 +60,6 @@
     }
   }
 }
-
-// .profile_buttons{
-//   :global{
-//     svg {
-//       width: 1.4em;
-//       height: 1.4em;
-//     }
-//   }
-// }
 
 .profile_reject {
   background: #923f78 !important;

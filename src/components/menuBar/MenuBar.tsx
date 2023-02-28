@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Menu, MenuProps, Layout } from 'antd';
+import { Menu, Layout } from '../atoms';
+import { MenuProps } from 'antd';
 import { Avatar, Text, Title } from '../../components/atoms';
 import styles from './MenuBar.module.scss';
 
