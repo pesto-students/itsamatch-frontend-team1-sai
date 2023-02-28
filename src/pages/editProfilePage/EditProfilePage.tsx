@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Col, Image, Select, Tag, TextArea, Text, Title, Radio, Row, HeartFilled } from '../../components/atoms';
+import { Col, Image, Select, Slider, Tag, TextArea, Text, Title, Radio, Row , Upload, HeartFilled } from '../../components/atoms';
 
-import { Slider, Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 import type { CustomTagProps } from 'rc-select/lib/BaseSelect';
 
 import type { SelectProps } from 'antd';
 
-// import './editProfilePage.css';
 import styles from './editProfilePage.module.scss';
 
 const img_url =

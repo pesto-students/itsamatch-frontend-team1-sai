@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import logo from '../src/assets/images/logo_with_name.svg';
 import { Layout } from 'antd';
 import { MenuBar } from './components';
-import { EditProfilePage, Home, Login, Matches, PageNotFound, Register } from './pages';
+import { EditProfilePage, Home, Login, Likes,Matches, PageNotFound, Register } from './pages';
 import styles from './App.module.scss';
 
 import * as Sentry from '@sentry/react';
@@ -19,7 +19,7 @@ Sentry.init({
 
 const App: React.FC = () => {
   return (
-    <Layout className="layout">
+    <Layout className={styles.layout_header}>
       <Header className={styles.header_layout}>
         <div className={styles.logo}>
           <img src={logo} alt="img" />
@@ -34,12 +34,12 @@ const App: React.FC = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/matches" element={<Matches />} />
+            <Route path="/likes" element={<Likes />} />
             <Route path="/" index element={<Home />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Content>
       </Layout>
-      <Footer style={{ textAlign: 'center' }}>Dating App &copy;2023</Footer>
     </Layout>
   );
 };

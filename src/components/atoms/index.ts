@@ -8,5 +8,7 @@ export * from './image';
 export * from './radio';
 export * from './select';
 export * from './space';
+export * from './slider';
 export * from './tag';
 export * from './typography';
+export * from './upload';

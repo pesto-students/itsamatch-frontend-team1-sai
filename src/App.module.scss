@@ -3,6 +3,8 @@
   background: white !important;
 }
 
+
+
 .logo {
   float: left;
   display: flex;
@@ -11,10 +13,7 @@
 }
 
 
-.site_layout{
-  :global{
-    .ant-layout-content{
-      margin: 0 16px;
-    }
-  }
+.layout_header{
+  overflow: hidden;
+  height: 100%;
 }

@@ -7,7 +7,7 @@ function Matches() {
   return (
     <div className={styles.matches_card_container}>
       {Array.apply(null, { length: 4 }).map((e, i) => (
-        <Row key={i}>
+        <Row key={i} gutter={48}>
           <Col span={8}>
             <MatchCard></MatchCard>
           </Col>

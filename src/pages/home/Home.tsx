@@ -8,12 +8,12 @@ import {
   Title,
   Space,
   Row,
+  Upload,
   CloseOutlined,
   HeartFilled,
   TwitterOutlined,
   PushpinFilled,
 } from '../../components/atoms';
-import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
