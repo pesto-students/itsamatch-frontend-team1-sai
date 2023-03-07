@@ -2,8 +2,26 @@ import { MatchCard } from '../../components/molecules';
 import { Col, Row } from '../../components/atoms';
 
 import styles from './matches.module.scss';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function Matches() {
+
+
+  const fetchingData = async() => {
+    const data = await axios.get('http://localhost:9000/matches')
+
+    console.log(data)
+
+    return data;
+  }
+
+
+  useEffect(()=>{
+    console.log("eeeeeeeeeeeeee")
+    fetchingData()
+  }, []) 
+
   return (
     <div className={styles.matches_card_container}>
       {Array.apply(null, { length: 4 }).map((e, i) => (

@@ -58,7 +58,7 @@ const MenuBar = () => {
 
     return (
       <div className={styles.my_profile_image_container}>
-        <Avatar size={190} src={img_url} />
+        <Avatar size={200} src={img_url} />
         <Title level={4}>Floyd Miles, 35</Title>
         <Text className={styles.my_profile_text} onClick={handleClick}>
           Complete my profile
@@ -126,6 +126,8 @@ const MenuBar = () => {
         console.log(collapsed, type);
       }}
       className={styles.sider_bar}
+      trigger={null}
+      style={{height: '100vh'}}
     >
       {renderProfileImage()}
       {renderProfileStats()}
