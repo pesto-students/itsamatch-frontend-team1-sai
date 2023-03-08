@@ -1,0 +1,111 @@
+.home_comp{
+  padding: 24px !important;
+}
+
+.home_comp{
+  :global{
+    .ant-image {
+     width: 100% !important;
+    }
+  }
+}
+
+.home_comp {
+  :global{
+    .ant-upload-list {
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+}
+
+
+.user_profile_text {
+  margin-bottom: 1.2em;
+  color: #9c8aa5 !important;
+  font-size: 0.8em;
+}
+
+.profile_location{
+  color: #9c8aa5;
+  border: none;
+  background: #eef2ff;
+}
+
+.user_main_photo{
+  width: 100%;
+}
+
+.user_tags{
+  background:#9c8aa5;
+  color: white;
+}
+
+.profile_buttons {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  cursor: pointer;
+}
+
+.profile_buttons{
+  :global{
+    .ant-btn-circle {
+      width: 80px !important;
+      height: 80px;
+    }
+  }
+}
+
+// .profile_buttons{
+//   :global{
+//     svg {
+//       width: 1.4em;
+//       height: 1.4em;
+//     }
+//   }
+// }
+
+.profile_reject {
+  background: #923f78 !important;
+  color: white !important;
+  border: none;
+}
+
+.profile_like {
+  background: white !important;
+  color: #923f78 !important;
+  border: none;
+}
+
+
+// css for website responsiveness
+@media only screen and (max-width: 768px){
+  .profile_buttons{
+    :global{
+      .ant-btn-circle {
+        width: inherit !important;
+        height: inherit;
+      }
+    }
+
+    .profile_buttons{
+      :global{
+        svg {
+          width: 0.8em !important;
+          height: 0.8em !important;
+        }
+      }
+    }
+
+  }}
+
+
+
+
+
+
+
+

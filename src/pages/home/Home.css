@@ -1,0 +1,59 @@
+.home_comp {
+  padding: 24px !important;
+}
+
+.home_comp .ant-image {
+  width: 100% !important;
+}
+
+.home_comp .ant-upload-list {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.home_comp .profile_location {
+  color: #9c8aa5;
+  border: none;
+}
+
+.profile_title {
+  margin-bottom: 0.2em !important;
+  color: #923f78 !important;
+}
+
+.about_text {
+  margin-bottom: 1.2em;
+  color: #9c8aa5 !important;
+  font-size: 0.8em;
+}
+
+.profile_svg {
+  height: 1.6em !important;
+  width: 1.6em !important;
+}
+
+.profile_buttons {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  cursor: pointer;
+}
+
+.profile_buttons .ant-btn-circle {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.home_comp .profile_buttons .profile_reject {
+  background-color: #923f78 !important;
+  color: white !important;
+  border: none;
+}
+
+.home_comp .profile_buttons .profile_like {
+  background-color: white !important;
+  color: #923f78 !important;
+  border: none;
+}
