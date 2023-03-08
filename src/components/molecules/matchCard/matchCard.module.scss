@@ -1,0 +1,29 @@
+.match_card {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.match_card_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_location {
+  color: #9c8aa5;
+  border: none;
+  background: #eef2ff;
+}
+
+.profile_reject {
+  background: #923f78 !important;
+  color: white !important;
+  border: none;
+}
+
+.profile_message {
+  background: white !important;
+  color: #923f78 !important;
+  border: 1px solid #923f78;
+}

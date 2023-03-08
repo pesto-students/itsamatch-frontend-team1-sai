@@ -1,0 +1,35 @@
+.profile_edit_comp {
+  padding: 24px !important;
+}
+
+.profile_edit_comp .ant-image {
+  width: 100%;
+}
+.user_info {
+  color: #923f78 !important;
+  margin-bottom: 0.4em !important;
+}
+
+.user_info_btns .ant-radio-button-wrapper {
+  color: #9c8aa5 !important;
+  border: 1px solid #9c8aa5 !important;
+}
+
+.user_info_btns .ant-radio-button-wrapper-checked {
+  background: #923f78 !important;
+  color: white !important;
+  border: 1px solid #9c8aa5 !important;
+}
+
+.user_info_btns .ant-radio-button-wrapper-checked::before {
+  background: white !important;
+}
+
+.user_info_btns .ant-radio-button-wrapper:hover {
+  color: #9c8aa5 !important;
+}
+
+.user_info_div {
+  padding: 8px;
+  margin-top: 1em;
+}
