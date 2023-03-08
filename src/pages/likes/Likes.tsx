@@ -5,7 +5,7 @@ import { LikeCard } from '../../components/molecules';
 function Likes() {
   return (
     <div className={styles.likes_card_container}>
-      {Array.apply(null, { length: 4 }).map((e, i) => (
+      {Array.apply(4).map((e, i) => (
         <Row>
           <Col span={8}>
             <LikeCard></LikeCard>

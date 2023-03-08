@@ -6,7 +6,7 @@ import styles from './matches.module.scss';
 function Matches() {
   return (
     <div className={styles.matches_card_container}>
-      {Array.apply(null, { length: 4 }).map((e, i) => (
+      {Array.apply(4).map((e, i) => (
         <Row key={i}>
           <Col span={8}>
             <MatchCard></MatchCard>
