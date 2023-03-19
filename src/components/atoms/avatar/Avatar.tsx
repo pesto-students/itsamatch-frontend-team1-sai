@@ -5,7 +5,7 @@ interface IAvatarProps {
   className?: string;
   children?: string | JSX.Element | JSX.Element[];
   icon?: React.ReactNode;
-  size?: number | 'large' | 'small' | 'default' | { xs: number; sm: number; lg: number };
+  size?: number | 'large' | 'small' | 'default' | { xs: number; sm: number; lg: number; md: number };
   shape?: 'circle' | 'square';
   src?: 'string' | React.ReactNode;
 }
