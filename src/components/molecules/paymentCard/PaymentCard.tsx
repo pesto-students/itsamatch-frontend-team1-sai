@@ -36,7 +36,7 @@ const PaymentCard: React.FC = () => {
           amount: product.price * 100,
           token,
           // TODO:- Update the userId 
-          userId: 'userId'
+          userId: 'userId123'
         },
       });
       if (response.status === 200) {
