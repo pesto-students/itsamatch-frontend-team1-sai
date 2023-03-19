@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import logo from '../src/assets/images/logo_with_name.svg';
 import { Layout } from 'antd';
 import { MenuBar } from './components';
-import { EditProfilePage, Home, Login, Likes,Matches, PageNotFound, Register } from './pages';
+import { EditProfilePage, Home, Login, Likes,Matches, PageNotFound, Register, Payments } from './pages';
 import styles from './App.module.scss';
 
 import * as Sentry from '@sentry/react';
@@ -35,6 +35,7 @@ const App: React.FC = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/matches" element={<Matches />} />
             <Route path="/likes" element={<Likes />} />
+            <Route path="/payments" element={<Payments />} />
             <Route path="/" index element={<Home />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
