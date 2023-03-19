@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useQuery } from 'react-query';
 import {
   Button,
   Col,
@@ -18,11 +19,24 @@ import ImgCrop from 'antd-img-crop';
 import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
 import styles from './Home.module.scss';
+import axios from 'axios';
 
 const img_url =
   'https://images.unsplash.com/photo-1533973427779-4b8c2eb4c3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
 
 const Home: React.FC = () => {
+
+  const { isLoading, error, data, isFetching } = useQuery('userProfiles', () =>
+    axios.get(`http://localhost:9000/users/6402da9c69b0649d1832ba20/profiles?page=1&size=1`).then((res) => res.data)
+  );
+
+  // if (isLoading) return (<div>Loading...</div>);
+
+  // if (error) {
+  //   return (<div>An error has occurred:{error};</div>)
+  // }
+    
+
   const renderPhotos = () => {
     return (
       <Col span={24}>
@@ -85,7 +99,7 @@ const Home: React.FC = () => {
       <>
         <Col>
           <Title className={styles.user_profile_title} level={3}>
-            Mabelle, 30
+            Mabelle
           </Title>
           <Tag icon={<PushpinFilled />} className={styles.profile_location}>
             Atlanta, USA
@@ -172,6 +186,7 @@ const Home: React.FC = () => {
       </Col>
     );
   };
+
 
   return (
     <div className={styles.home_comp}>
